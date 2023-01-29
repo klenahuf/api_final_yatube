@@ -9,15 +9,15 @@ API для взаимодействия с Yatube* посредством обм
 
 Клонируйте репозиторий с проектом в вашу домашнюю директорию такой командой:
 ```
-https://github.com/klenahuf/api_final_yatube```
-
+https://github.com/klenahuf/api_final_yatube
+```
 
 Перейдите в репозиторий в командной строке:
 ```
 cd api_final_yatube
 ```
 
-Cоздайте виртуальное окружение:
+Cоздайте виртуальное окружение (это своего рода «изолированные территории», отдельные виртуальные загончики для проектов.):
 
 ```
 python3 -m venv env
@@ -37,7 +37,7 @@ source venv/Scripts/activate
 python3 -m pip install --upgrade pip
 ```
 
-Установите зависимости из файла requirements.txt:
+Установите зависимости (программы, которые понадобятся для работы проекта, будут установлены в виртуальное окружение) из файла requirements.txt:
 
 ```
 pip install -r requirements.txt
