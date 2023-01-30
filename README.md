@@ -17,7 +17,7 @@ https://github.com/klenahuf/api_final_yatube
 cd api_final_yatube
 ```
 
-Cоздайте виртуальное окружение (это своего рода «изолированные территории», отдельные виртуальные загончики для проектов.):
+Cоздайте виртуальное окружение:
 
 ```
 python3 -m venv env
@@ -37,14 +37,12 @@ source venv/Scripts/activate
 python3 -m pip install --upgrade pip
 ```
 
-Установите зависимости (программы, которые понадобятся для работы проекта, будут установлены в виртуальное окружение) из файла requirements.txt:
-
+Установите зависимости из файла requirements.txt:
 ```
 pip install -r requirements.txt
 ```
 
-Выполните миграции (будет создана база данных для работы с проектом):
-
+Выполните миграции:
 ```
 python3 manage.py migrate
 либо
@@ -52,7 +50,6 @@ python manage.py migrate
 ```
 
 Запустите проект:
-
 ```
 python3 manage.py runserver
 либо
