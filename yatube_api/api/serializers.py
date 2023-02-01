@@ -64,4 +64,3 @@ class FollowSerializer(serializers.ModelSerializer):
                 fields=['following', 'user'],
             )
         ]
-
