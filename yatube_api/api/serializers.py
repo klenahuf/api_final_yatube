@@ -14,7 +14,10 @@ class GroupSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
-    author = SlugRelatedField(slug_field='username', read_only=True)
+    author = serializers.SlugRelatedField(
+        slug_field='username',
+        read_only=True
+    )
 
     class Meta:
         fields = '__all__'
@@ -23,7 +26,8 @@ class PostSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     author = serializers.SlugRelatedField(
-        read_only=True, slug_field='username'
+        read_only=True,
+        slug_field='username'
     )
 
     class Meta:
@@ -48,10 +52,11 @@ class FollowSerializer(serializers.ModelSerializer):
         following = get_object_or_404(User, username=value)
         if user == following:
             raise serializers.ValidationError(
-                "Запрещено подписываться на самого себя")
+                "Запрещено подписываться на самого себя"
+            )
         return super().validate(value)
 
-    class Meta:
+    class Meta: 
         model = Follow
         fields = '__all__'
         validators = [
