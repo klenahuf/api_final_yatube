@@ -55,8 +55,7 @@ class FollowSerializer(serializers.ModelSerializer):
             )
         return super().validate(value)
 
-
-    class Meta: 
+    class Meta:
         model = Follow
         fields = '__all__'
         validators = [
